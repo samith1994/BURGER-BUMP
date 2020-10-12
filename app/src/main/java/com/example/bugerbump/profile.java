@@ -72,10 +72,9 @@ public class profile extends AppCompatActivity {
                 upEmail=proemail.getEditText().getText().toString();
                 upPhoneNo=prophoneNO.getEditText().getText().toString();
                 upPassword=propassword.getEditText().getText().toString();
-              Helper helper=new Helper(upUsername,upEmail,upPhoneNo,upPassword);
-              databaseReference.setValue(helper);
+                Helper helper=new Helper(upUsername,upEmail,upPhoneNo,upPassword);
+                databaseReference.setValue(helper);
                 Toast.makeText(getApplicationContext(), "Data Updated Successfully", Toast.LENGTH_SHORT).show();
-
             }
         });
 
@@ -130,6 +129,7 @@ public class profile extends AppCompatActivity {
 
     private void showUserData() {
         Intent intent = getIntent();
+
         _username = intent.getStringExtra("username");
         _email = intent.getStringExtra("email");
          _phoneNo = intent.getStringExtra("phoneNo");

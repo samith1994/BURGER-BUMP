@@ -20,6 +20,9 @@
         <activity android:name=".Home" />
         <activity android:name=".signup" />
         <activity android:name=".userlogin" />
+        <activity android:name=".DeliveryDetails" />
+        <activity android:name=".DeliveryDisplay" />
+        <activity android:name=".Payment" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

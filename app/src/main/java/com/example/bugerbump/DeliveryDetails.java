@@ -34,7 +34,7 @@ public class DeliveryDetails extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_deliverydetails);
 
 
 
@@ -65,8 +65,9 @@ public class DeliveryDetails extends AppCompatActivity {
         btnConfirm.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                startActivity(new Intent(DeliveryDetails.this,DeliveryDetails.class));
 
-                openDeliveryDisplay();
+
 
                 if (TextUtils.isEmpty(Fname.getText().toString())) {
                     Toast.makeText(DeliveryDetails.this, "Enter First Name", Toast.LENGTH_SHORT).show();
@@ -96,18 +97,14 @@ public class DeliveryDetails extends AppCompatActivity {
         btnCancel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                returnToHomePage();
+                Intent intent=new Intent(DeliveryDetails.this,Home.class);
+                startActivity(intent);
+
             }
         });
 
     }
 
-    public void openDeliveryDisplay() {
-        Intent i = new Intent(getApplicationContext(), DeliveryDisplay.class);
-        startActivity(i);
-    }
 
-    public void returnToHomePage() {
 
-    }
 }
